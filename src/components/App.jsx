@@ -3,8 +3,16 @@ import Counter from './Counter/Counter.js'
 
 export const App = () => {
   return (
-    <BrowserRouter basename="/your_repo_name">
-      <App />
-    </BrowserRouter>
+    <div
+      style={{
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 40,
+        color: '#010101'
+      }}
+    >
+    </div>
   );
 };
