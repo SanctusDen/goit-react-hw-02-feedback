@@ -1,17 +1,16 @@
-
 import PropTypes from 'prop-types';
-import { btns, wrapperBtns } from './FeedbackOptions.module';
+// import { Div,Button } from './FeedbackOptions.module';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
         <>
-            <wrapperBtns>
+            <div>
                 {options.map(option => (
-                    <btns key={option} onClick={() => onLeaveFeedback(option)}>
+                    <button  key={option} onClick={() => onLeaveFeedback(option)}>
                         {option}
-                    </btns>
+                    </button>
                 ))}
-            </wrapperBtns>
+            </div>
         </>
     
     );
