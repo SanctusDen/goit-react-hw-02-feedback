@@ -1,5 +1,8 @@
-export const Statistics = () => {
-    return (
-        <div>This Static</div>
-    )
-}
+export const Section = ({ children, title }) => {
+  return (
+    <>
+      <h1>{title}</h1>
+      <div>{children}</div>
+    </>  
+  )
+};
