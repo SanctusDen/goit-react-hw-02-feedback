@@ -6,6 +6,7 @@
 // `
 
 // export const Button = styled.button`
+//   cursor: pointer;
 //   padding: 8px;
 //   font-weight: 600;
 //   font-size: 14px;

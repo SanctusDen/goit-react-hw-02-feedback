@@ -12,21 +12,19 @@ class App extends React.Component {
     bad: 0,
   };
 
-  // handleFeedback = e => {
-  //     this.setState((prevState) => {
-  //         return {
-  //             [value]: prevState[value] + 1,
-  //         };
-  //     });
-  // };
-
-  handleFeedback = type => {
-    this.setState(prevState => ({
-      [type]: prevState[type] + this.state,
-    }));
+  handleFeedback = e => {
+    e.preventDefault();
+    const value = e.target.value;
+    this.setState(prevState => {
+      return { [value]: prevState[value] + 1 };
+    });
   };
 
-  onLeaveFeedback = () => {};
+  // handleFeedback = type => {
+  //   this.setState(prevState => ({
+  //     [type]: prevState[type] + this.state,
+  //   }));
+  // };
 
   countPositiveFeedback = () => {
     return Math.round((this.state.good / this.TotalFeedback()) * 100);
@@ -49,7 +47,7 @@ class App extends React.Component {
         <Section title="Please leave your feedback here">
           <FeedbackOptions
             options={onFeedbackOptions}
-            onLeaveFeedBack={this.onLeaveFeedback}
+            onLeaveFeedBack={this.handleFeedback}
           />
           {countTotal > 0 ? (
             <Statistics
