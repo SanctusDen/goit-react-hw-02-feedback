@@ -12,23 +12,22 @@ class App extends React.Component {
     bad: 0,
   };
 
-  handleFeedback = () => {
-    this.setState(prevState => {
-      return {
-        good: prevState.value + 1,
-        neutral: prevState.value + 1,
-        bad: prevState.value + 1
-      }
-    });
-  };
-
-  // handleFeedback = e => {
-  //   e.preventDefault();
-  //   const value = e.target.value;
+  // handleFeedback = () => {
   //   this.setState(prevState => {
-  //     return { [value]: prevState[value] += 1 };
+  //     return {
+  //       good: prevState.value + 1,
+  //       neutral: prevState.value + 1,
+  //       bad: prevState.value + 1
+  //     }
   //   });
   // };
+
+  handleFeedback = e => {
+    const value = e.target.value;
+    this.setState(prevState => {
+      return { [value]: prevState[value] + 1 };
+    });
+  };
 
 
 
