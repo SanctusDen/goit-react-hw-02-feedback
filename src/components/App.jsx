@@ -28,6 +28,7 @@ class App extends React.Component {
     const total = good + neutral + bad;
     return total;
   };
+  
 
   render() {
     const { good, neutral, bad } = this.state;
